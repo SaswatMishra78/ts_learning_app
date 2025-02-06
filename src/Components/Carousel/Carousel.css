@@ -1,0 +1,49 @@
+/* .carousel-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.slide-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+} */
+
+.sample-slider {
+  width: 70%;
+  position: static!important;
+  display: grid!important;
+}
+.sample-slider [class^="swiper-button-"]{
+  inset: initial;
+  margin: 0;
+  align-self: center;
+}
+.sample-slider .swiper-button-prev{
+  justify-self: start;
+  margin-left: -80px;
+  scale : 0.6;
+  color: #000;
+}
+.sample-slider .swiper-button-next{
+  justify-self: end;
+  margin-right: -80px;
+  scale : 0.6;
+  color: #000;
+}
+
+.sample-slider img {
+    width: 100%;
+    border-radius: 1rem;
+}
