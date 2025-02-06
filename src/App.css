@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 } */
+
+#root {
+  padding: 2rem;
+}
+
+
+.mb-1rem {
+  margin-bottom: 1rem;
+}

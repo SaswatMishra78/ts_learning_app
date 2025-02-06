@@ -2,10 +2,15 @@ import React from "react";
 import { render, screen, fireEvent, act, waitFor } from "@testing-library/react";
 import Login from "./Login";
 import '@testing-library/jest-dom';
+import { MemoryRouter } from "react-router-dom";
 
 describe("Login Form Validation", () => {
   test("renders input fields and login button", () => {
-    render(<Login />);
+    render(
+      <MemoryRouter>
+    <Login />
+    </MemoryRouter>
+  );
 
     expect(screen.getByTestId("username")).toBeInTheDocument();
     expect(screen.getByTestId("password")).toBeInTheDocument();
@@ -13,7 +18,9 @@ describe("Login Form Validation", () => {
   });
 
   test("shows an error if username is less than 6 characters", async () => {
-    render(<Login />);
+    render(<MemoryRouter>
+      <Login />
+      </MemoryRouter>);
     const usernameInput = screen.getByTestId("username").querySelector("input");
 
     await act(async () => {
@@ -27,7 +34,9 @@ describe("Login Form Validation", () => {
   });
 
   test("shows an error if password is less than 8 characters", async () => {
-    render(<Login />);
+    render(<MemoryRouter>
+      <Login />
+      </MemoryRouter>);
 
     const passwordInput = screen.getByTestId("password").querySelector("input"); // Get the actual input element
 

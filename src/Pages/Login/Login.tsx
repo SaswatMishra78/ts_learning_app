@@ -5,6 +5,7 @@ import * as yup from "yup";
 import { TextField, Button, Box, Container, Typography } from "@mui/material";
 import "./Login.css";
 import useUserStore from "../../Store/userStore";
+import { useNavigate } from "react-router-dom";
 const schema = yup.object().shape({
   username: yup
     .string()
@@ -17,6 +18,7 @@ const schema = yup.object().shape({
 });
 
 const Login = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -29,6 +31,7 @@ const Login = () => {
   const onSubmit = (data : any) => {
     // console.log("Form Submitted", data);
     setUser(data);
+    navigate("/home");
   };
 
   return (
