@@ -6,7 +6,7 @@ import useUserStore from './Store/userStore';
 import { useNavigate } from 'react-router-dom';
 import Carousel from './Components/Carousel/Carousel';
 import DialogModal from './Components/DialogModal/DialogModal';
-import Home from './Components/homepage/homepage';
+import Home from './Pages/Home/Home';
 function App() {
   const { user } = useUserStore();
   const navigate = useNavigate();

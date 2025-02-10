@@ -1,6 +1,5 @@
-import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import Home from "./homepage";
+import Home from "./Home";
 import "@testing-library/jest-dom";
 import axios from "axios";
 jest.mock("axios");
